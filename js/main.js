@@ -45,8 +45,8 @@ window.onload = function(){
 		"Now that\'s what I call dedication!"
 	];
 	
-
-	var date = new Date("October 22, 2014 15:45:01");
+	//"October 22, 2014 15:45:01" date for for testing
+	var date = new Date();
 	var day = date.getDay();
 	var hour = date.getHours();
 	var minutes = date.getMinutes();
