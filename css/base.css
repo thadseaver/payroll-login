@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* CSS Document - Main Stylesheet - base.css */
+/* Thad Seaver
+Payroll login - Oct 2014 */
+
+
+/* BODY AND CONTAINER
+------------------------------------------- */
+
+body {
+	padding: 0;
+	margin: 0;
+}
+
+#wrapper {
+	width: 920px;
+	min-height: 500px;
+	padding: 0 20px 20px;
+	margin: 0 auto;
+}
+
+#content-wrap {
+	min-height: 200px;
+	margin: 20px 0;
+}
+
+
+/* HEADER
+------------------------------------------- */
+
+header {
+	width: 920px;
+	height: 100px;
+}
+
+header h1 {
+	margin: 0;
+	font-size: 3em;
+	line-height: 100px;
+}
+
+
+/* CONTENT AREA
+------------------------------------------- */
+
+#content-wrap p {
+	margin: 0;
+	font-size: 1.3em;
+}
+
+textarea {
+	width: 200px;
+	margin: 0 0 10px 0;
+}
+
+form {
+	margin: 20px 0;
+}
+
+ul {
+	padding: 0;
+	list-style: none;
+}
+
+
