@@ -59,40 +59,38 @@ window.onload = function(){
 
 		var randomGreeting = punchInObscureGreeting[Math.floor(Math.random() * punchInObscureGreeting.length)];
 		document.getElementById('greeting').innerHTML = randomGreeting;
-		//bg.style.backgroundImage = 'url(images/night.jpg)'; // change background image
 		bg.style.cssText +=';background-image:url(images/night.jpg);background-color:#131729;';
 		
 	} else if ((currentSeconds >= 18000) && (currentSeconds <= 21600)) { // check for punch in
 	
 		var randomGreeting = punchInGreeting[Math.floor(Math.random() * punchInGreeting.length)];
 		document.getElementById('greeting').innerHTML = randomGreeting;
-		//bg.style.backgroundImage = 'url(images/morning.jpg)'; // change background image
 		bg.style.cssText +=';background-image:url(images/morning.jpg);background-color:#323e4d;';
 		
 	} else if ((currentSeconds >= 21601) && (currentSeconds <= 43199)) { // check for late punch in
 	
 		var randomGreeting = punchInLateGreeting[Math.floor(Math.random() * punchInLateGreeting.length)];
 		document.getElementById('greeting').innerHTML = randomGreeting;
-		//bg.style.backgroundImage = 'url(images/afternoon.jpg)'; // change background image
 		bg.style.cssText +=';background-image:url(images/afternoon.jpg);background-color:#345a97;';
 		
 	} else if ((currentSeconds >= 43200) && (currentSeconds <=56700)) { // check for punch out
 	
 		var randomGreeting = punchOutGreeting[Math.floor(Math.random() * punchOutGreeting.length)];
 		document.getElementById('greeting').innerHTML = randomGreeting;
-		//bg.style.backgroundImage = 'url(images/evening.jpg)'; // change background image
 		bg.style.cssText +=';background-image:url(images/evening.jpg);background-color:#757c8c;';
 		
 	} else if ((currentSeconds >= 56701) && (currentSeconds <= 86399)) { // check for late punch out
 	
 		var randomGreeting = punchOutLateGreeting[Math.floor(Math.random() * punchOutLateGreeting.length)];
 		document.getElementById('greeting').innerHTML = randomGreeting;
-		//bg.style.backgroundImage = 'url(images/night.jpg)'; // change background image
 		bg.style.cssText +=';background-image:url(images/night.jpg);background-color:#131729;';
 		
 	} else {
 		document.getElementById('greeting').innerHTML = defaultMessage; //
 	}
+	
+	// Select the company ID in the textarea
+	document.getElementById('company-id').select();
 	
 	
 }; //end function
