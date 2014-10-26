@@ -13,9 +13,9 @@ To help speed along the entering of this ID, I created a blank web page that has
 Project
 =======
 
-I'm going to use Javascript to get the date and time, then, based on the day of the week and time of day, I'll be greeted with a random message. The page background color and image will also change based on the time of day. There will be a button to "Copy to clipboard" the company ID.
-
 The purpose of this project is to get the ID on the clipboard.
+
+I'm going to use Javascript to get the date and time, then, based on the day of the week and time of day, I'll be greeted with a random message. The page background color and image will also change based on the time of day. There will be a button to "Copy to clipboard" the company ID.
 
 Challenges
 ==========
