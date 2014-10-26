@@ -5,7 +5,7 @@ window.onload = function(){
 		"What in the world are you doing in here at this hour?",
 		"Do you realize what time it is???",
 		"I sure hope you have a lot of coffee!",
-		"Wow, this must be some hot job!",
+		"Hang on a second, what time is it???",
 		"I don\'t even know what to say..."
 	];
 	
@@ -14,7 +14,7 @@ window.onload = function(){
 		"Good morning, Thad. Are you ready for another one?",
 		"Here we are. Another day to excel!",
 		"Good morning, sunshine. Let\'s go make some chips!",
-		"Can you believe that they pay you to come in here and play with machines all day? How cool is that?",
+		"Can you believe that they pay you to play with machines all day? How cool is that?",
 		"Here we go again. Grab a cup of coffee and let\'s get after it!"
 	];
 	
@@ -50,22 +50,28 @@ window.onload = function(){
 	var day = date.getDay();
 	var hour = date.getHours();
 	var minutes = date.getMinutes();
-	var seconds = date.getSeconds();
-	
-	var currentSeconds = (hour * 3600) + (minutes * 60) + seconds	
+	var seconds = date.getSeconds();	
+	var currentSeconds = (hour * 3600) + (minutes * 60) + seconds; // convert time to seconds
+	var bg = document.getElementsByTagName("body")[0];
+	var defaultMessage = "Good morning Thad. Let's go make some chips!";
 	
 	if ((currentSeconds >= 0) && (currentSeconds <= 17999)) { // check for obscure punch in
 		document.getElementById('greeting').innerHTML = punchInObscureGreeting[4];
-	} else if ((currentSeconds >= 18000) && (currentSeconds <= 21600)) { // check for late punch in
-		document.getElementById('greeting').innerHTML = punchInGreeting[0];
+		bg.style.backgroundImage = 'url(images/night.jpg)'; // change background image
+	} else if ((currentSeconds >= 18000) && (currentSeconds <= 21600)) { // check for punch in
+		document.getElementById('greeting').innerHTML = punchInGreeting[4];
+		bg.style.backgroundImage = 'url(images/morning.jpg)'; // change background image
 	} else if ((currentSeconds >= 21601) && (currentSeconds <= 43199)) { // check for late punch in
 		document.getElementById('greeting').innerHTML = punchInLateGreeting[0];
+		bg.style.backgroundImage = 'url(images/afternoon.jpg)'; // change background image
 	} else if ((currentSeconds >= 43200) && (currentSeconds <=56700)) { // check for punch out
 		document.getElementById('greeting').innerHTML = punchOutGreeting[4];
+		bg.style.backgroundImage = 'url(images/evening.jpg)'; // change background image
 	} else if ((currentSeconds >= 56701) && (currentSeconds <= 86399)) { // check for late punch out
-		document.getElementById('greeting').innerHTML = punchOutLateGreeting[4];
+		document.getElementById('greeting').innerHTML = punchOutLateGreeting[3];
+		bg.style.backgroundImage = 'url(images/night.jpg)'; // change background image
 	} else {
-		document.getElementById('greeting').innerHTML = "wrong";
+		document.getElementById('greeting').innerHTML = defaultMessage; //
 	}
 	
 	
