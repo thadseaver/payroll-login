@@ -7,7 +7,7 @@ window.onload = function(){
 		"I sure hope you have a lot of coffee!",
 		"Hang on a second, what time is it???",
 		"I don\'t even know what to say..."
-	];
+	]
 	
 	// 5:00:00 AM to 6:00:00 AM - 18000 to 21600 seconds
 	var punchInGreeting = [
@@ -56,20 +56,40 @@ window.onload = function(){
 	var defaultMessage = "Good morning Thad. Let's go make some chips!";
 	
 	if ((currentSeconds >= 0) && (currentSeconds <= 17999)) { // check for obscure punch in
-		document.getElementById('greeting').innerHTML = punchInObscureGreeting[4];
-		bg.style.backgroundImage = 'url(images/night.jpg)'; // change background image
+
+		var randomGreeting = punchInObscureGreeting[Math.floor(Math.random() * punchInObscureGreeting.length)];
+		document.getElementById('greeting').innerHTML = randomGreeting;
+		//bg.style.backgroundImage = 'url(images/night.jpg)'; // change background image
+		bg.style.cssText +=';background-image:url(images/night.jpg);background-color:#131729;';
+		
 	} else if ((currentSeconds >= 18000) && (currentSeconds <= 21600)) { // check for punch in
-		document.getElementById('greeting').innerHTML = punchInGreeting[4];
-		bg.style.backgroundImage = 'url(images/morning.jpg)'; // change background image
+	
+		var randomGreeting = punchInGreeting[Math.floor(Math.random() * punchInGreeting.length)];
+		document.getElementById('greeting').innerHTML = randomGreeting;
+		//bg.style.backgroundImage = 'url(images/morning.jpg)'; // change background image
+		bg.style.cssText +=';background-image:url(images/morning.jpg);background-color:#323e4d;';
+		
 	} else if ((currentSeconds >= 21601) && (currentSeconds <= 43199)) { // check for late punch in
-		document.getElementById('greeting').innerHTML = punchInLateGreeting[0];
-		bg.style.backgroundImage = 'url(images/afternoon.jpg)'; // change background image
+	
+		var randomGreeting = punchInLateGreeting[Math.floor(Math.random() * punchInLateGreeting.length)];
+		document.getElementById('greeting').innerHTML = randomGreeting;
+		//bg.style.backgroundImage = 'url(images/afternoon.jpg)'; // change background image
+		bg.style.cssText +=';background-image:url(images/afternoon.jpg);background-color:#345a97;';
+		
 	} else if ((currentSeconds >= 43200) && (currentSeconds <=56700)) { // check for punch out
-		document.getElementById('greeting').innerHTML = punchOutGreeting[4];
-		bg.style.backgroundImage = 'url(images/evening.jpg)'; // change background image
+	
+		var randomGreeting = punchOutGreeting[Math.floor(Math.random() * punchOutGreeting.length)];
+		document.getElementById('greeting').innerHTML = randomGreeting;
+		//bg.style.backgroundImage = 'url(images/evening.jpg)'; // change background image
+		bg.style.cssText +=';background-image:url(images/evening.jpg);background-color:#757c8c;';
+		
 	} else if ((currentSeconds >= 56701) && (currentSeconds <= 86399)) { // check for late punch out
-		document.getElementById('greeting').innerHTML = punchOutLateGreeting[3];
-		bg.style.backgroundImage = 'url(images/night.jpg)'; // change background image
+	
+		var randomGreeting = punchOutLateGreeting[Math.floor(Math.random() * punchOutLateGreeting.length)];
+		document.getElementById('greeting').innerHTML = randomGreeting;
+		//bg.style.backgroundImage = 'url(images/night.jpg)'; // change background image
+		bg.style.cssText +=';background-image:url(images/night.jpg);background-color:#131729;';
+		
 	} else {
 		document.getElementById('greeting').innerHTML = defaultMessage; //
 	}
