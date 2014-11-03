@@ -44,23 +44,7 @@ header h1 {
 /* CONTENT AREA
 ------------------------------------------- */
 
-#content-wrap p {
-	margin: 0;
+p#greeting {
 	font-size: 1.3em;
+	margin: 0 0 30px 0;
 }
-
-textarea {
-	width: 200px;
-	margin: 0 0 10px 0;
-}
-
-form {
-	margin: 20px 0;
-}
-
-ul {
-	padding: 0;
-	list-style: none;
-}
-
-

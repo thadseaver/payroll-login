@@ -26,18 +26,15 @@
             </header>
         	<div id="content-wrap"><!--I'm not sure why but viewing on hithub messes up the code formatting-->
 				<p id="greeting">Good morning Thad. Let's go make some chips!</p>
-                <form>
-                	<ul>
-                    	<li><textarea id="company-id">HIJKeLlaMeNOPee</textarea></li>
-                    	<li><button name="button">Copy to Clipboard</button></li>
-					</ul>
-                </form>
+                <div>
+                	<p>Company ID:  <span id="company-id">HIJKeLlaMeNOPee</span></p>
+                </div>
+                <button id="button" data-clipboard-target="company-id">Click here to copy the Company ID</button>
 			</div><!--end content-wrap-->
 		</div><!--end wrapper-->
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+		<script src="js/main.js"></script>
+        <script src="zeroclipboard-master/ZeroClipboard.js"></script>
+
     </body>
 </html>

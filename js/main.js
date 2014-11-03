@@ -40,7 +40,7 @@ window.onload = function(){
 	var punchOutLateGreeting = [
 		"Burning the midnight oil, huh?",
 		"Don\'t you love those last minute hot jobs?",
-		"Getting out late, huh? At least you\'ll have a nice paycheck on Friday",
+		"Getting out late, huh? At least you\'ll have a nice paycheck on Friday!",
 		"Just think, you\'re that much closer to having more fun here tomorrow!",
 		"Now that\'s what I call dedication!"
 	];
@@ -52,7 +52,7 @@ window.onload = function(){
 	var minutes = date.getMinutes();
 	var seconds = date.getSeconds();	
 	var currentSeconds = (hour * 3600) + (minutes * 60) + seconds; // convert time to seconds
-	var bg = document.getElementsByTagName("body")[0];
+	var bg = document.getElementsByTagName('body')[0];
 	var defaultMessage = "Good morning Thad. Let's go make some chips!";
 	
 	if ((currentSeconds >= 0) && (currentSeconds <= 17999)) { // check for obscure punch in
@@ -89,9 +89,10 @@ window.onload = function(){
 		document.getElementById('greeting').innerHTML = defaultMessage; //
 	}
 	
-	// Select the company ID in the textarea
-	document.getElementById('company-id').select();
-	
-	
-}; //end function
+	// Use ZeroClipboard to copy text to clipboard on button click
+	var clip = new ZeroClipboard( 
+		document.getElementById('button'), {
+		moviePath: "zeroclipboard-master/ZeroClipboard.swf"
+	});
 
+}; //end function
