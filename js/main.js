@@ -45,6 +45,9 @@ window.onload = function(){
 		"Now that\'s what I call dedication!"
 	];
 	
+	// Saturday greeting
+	var saturdayGreeting = "Working Saturday sucks!"
+	
 	//"October 22, 2014 15:45:01" date for for testing
 	var date = new Date();
 	var day = date.getDay();
@@ -55,7 +58,12 @@ window.onload = function(){
 	var bg = document.getElementsByTagName('body')[0];
 	var defaultMessage = "Good morning Thad. Let's go make some chips!";
 	
-	if ((currentSeconds >= 0) && (currentSeconds <= 17999)) { // check for obscure punch in
+	if (day == 6) {
+		
+		var randomGreeting = saturdayGreeting;
+		document.getElementById('greeting').innerHTML = randomGreeting;
+		
+	} else if ((currentSeconds >= 0) && (currentSeconds <= 17999)) { // check for obscure punch in
 
 		var randomGreeting = punchInObscureGreeting[Math.floor(Math.random() * punchInObscureGreeting.length)];
 		document.getElementById('greeting').innerHTML = randomGreeting;
