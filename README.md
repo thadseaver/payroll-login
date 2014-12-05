@@ -17,7 +17,6 @@ At the core, the purpose of this project is simply to get the company ID on the 
 
 I'm going to use Javascript to get the date and time. Then, based on the day of the week and time of day, I'll be greeted with a random message. The page background color and image will also change based on the time of day. There will be a button to "Copy to clipboard" the company ID.
 
-The finished product can be found at [http://payroll-login.thadseaver.com](http://payroll-login.thadseaver.com)
 
 Challenges
 ==========
@@ -29,3 +28,5 @@ Findings
 ========
 
 Javascript doesn't have access to the clipboard so I used a plugin called [ZeroClipboard](https://github.com/zeroclipboard/zeroclipboard "ZeroClipboard"). This plugin does not require the text to be selected before copying it.
+
+The finished product can be found at [http://payroll-login.thadseaver.com](http://payroll-login.thadseaver.com)
