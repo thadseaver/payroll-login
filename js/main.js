@@ -55,7 +55,7 @@ window.onload = function(){
 	var minutes = date.getMinutes();
 	var seconds = date.getSeconds();	
 	var currentSeconds = (hour * 3600) + (minutes * 60) + seconds; // convert time to seconds
-	var bg = document.getElementsByTagName('body');
+	var bg = document.getElementsByTagName('body')[0];
 	var defaultMessage = "Good morning Thad. Let's go make some chips!";
 	
 	if (day == 6) {
@@ -68,33 +68,33 @@ window.onload = function(){
 		var randomGreeting = punchInObscureGreeting[Math.floor(Math.random() * punchInObscureGreeting.length)];
 		var elem = document.getElementById('body');
 		document.getElementById('greeting').innerHTML = randomGreeting;
-		bg.style.cssText +=';background-image:url(images/night.jpg);background-color:#131729;padding:0;margin:0;';
+		bg.style.cssText +=';background-image:url(images/night.jpg);background-color:#131729;';
 		
 	} else if ((currentSeconds >= 18000) && (currentSeconds <= 21600)) { // check for punch in
 	
 		var randomGreeting = punchInGreeting[Math.floor(Math.random() * punchInGreeting.length)];
 		document.getElementById('greeting').innerHTML = randomGreeting;
-		bg.style.cssText +=';background-image:url(images/morning.jpg);background-color:#323e4d;padding:0;margin:0;';
+		bg.style.cssText +=';background-image:url(images/morning.jpg);background-color:#323e4d;';
 		
 	} else if ((currentSeconds >= 21601) && (currentSeconds <= 43199)) { // check for late punch in
 	
 		var randomGreeting = punchInLateGreeting[Math.floor(Math.random() * punchInLateGreeting.length)];
 		document.getElementById('greeting').innerHTML = randomGreeting;
-		bg.style.cssText +=';background-image:url(images/afternoon.jpg);background-color:#345a97;padding:0;margin:0;';
+		bg.style.cssText +=';background-image:url(images/afternoon.jpg);background-color:#345a97;';
 		
 	} else if ((currentSeconds >= 43200) && (currentSeconds <=56700)) { // check for punch out
 	
 		var randomGreeting = punchOutGreeting[Math.floor(Math.random() * punchOutGreeting.length)];
 		document.getElementById('greeting').innerHTML = randomGreeting;
-		bg.style.cssText +=';background-image:url(images/evening.jpg);background-color:#757c8c;padding:0;margin:0;';
+		bg.style.cssText +=';background-image:url(images/evening.jpg);background-color:#757c8c;';
 		
 	} else if ((currentSeconds >= 56701) && (currentSeconds <= 86399)) { // check for late punch out
 	
 		var randomGreeting = punchOutLateGreeting[Math.floor(Math.random() * punchOutLateGreeting.length)];
 		document.getElementById('greeting').innerHTML = randomGreeting;
-		bg.style.cssText +=';background-image:url(images/night.jpg);background-color:#131729;padding:0;margin:0;';
+		bg.style.cssText +=';background-image:url(images/night.jpg);background-color:#131729;';
 		
-	} else {
+	} else { // in case of failure
 		document.getElementById('greeting').innerHTML = defaultMessage; //
 	}
 	
