@@ -58,19 +58,19 @@ window.onload = function(){
 	var bg = document.getElementsByTagName('body')[0];
 	var defaultMessage = "Good morning Thad. Let's go make some chips!";
 	
-	if (day == 6) {
+	if (day == 6) { // check if today is Saturday
 		
-		var randomGreeting = saturdayGreeting;
+		var randomGreeting = saturdayGreeting; // no random greeting since everything about working Saturday sucks
 		document.getElementById('greeting').innerHTML = randomGreeting;
+		bg.style.cssText +=';background-image:url(images/morning.jpg);background-color:#323e4d;';
 		
 	} else if ((currentSeconds >= 0) && (currentSeconds <= 17999)) { // check for obscure punch in
 
 		var randomGreeting = punchInObscureGreeting[Math.floor(Math.random() * punchInObscureGreeting.length)];
-		var elem = document.getElementById('body');
 		document.getElementById('greeting').innerHTML = randomGreeting;
 		bg.style.cssText +=';background-image:url(images/night.jpg);background-color:#131729;';
 		
-	} else if ((currentSeconds >= 18000) && (currentSeconds <= 21600)) { // check for punch in
+	} else if ((currentSeconds >= 18000) && (currentSeconds <= 21600)) { // check for normal punch in
 	
 		var randomGreeting = punchInGreeting[Math.floor(Math.random() * punchInGreeting.length)];
 		document.getElementById('greeting').innerHTML = randomGreeting;
@@ -82,7 +82,7 @@ window.onload = function(){
 		document.getElementById('greeting').innerHTML = randomGreeting;
 		bg.style.cssText +=';background-image:url(images/afternoon.jpg);background-color:#345a97;';
 		
-	} else if ((currentSeconds >= 43200) && (currentSeconds <=56700)) { // check for punch out
+	} else if ((currentSeconds >= 43200) && (currentSeconds <=56700)) { // check for normal punch out
 	
 		var randomGreeting = punchOutGreeting[Math.floor(Math.random() * punchOutGreeting.length)];
 		document.getElementById('greeting').innerHTML = randomGreeting;
