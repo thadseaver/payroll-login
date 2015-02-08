@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document - Main Stylesheet - base.css */
 /* Thad Seaver
-Payroll login - Oct 2014 */
+Payroll login assistant - Oct 2014 */
 
 
 /* BODY AND CONTAINER
@@ -11,6 +11,7 @@ body {
 	background: #111 url(../images/morning.jpg) no-repeat fixed top center;
 	padding: 0;
 	margin: 0;
+	font-family: Helvetica, Arial, sans-serif;
 }
 
 #wrapper {
@@ -18,10 +19,13 @@ body {
 	padding: 0 20px 20px;
 	margin: 0 auto;
 	background-color: #ebebeb;
+	border-left: 1px solid #333;
+	border-right: 1px solid #333;
+	border-bottom: 1px solid #333;
 }
 
 #content-wrap {
-	min-height: 200px;
+	height: 200px;
 	margin: 20px 0;
 }
 
@@ -47,4 +51,12 @@ header h1 {
 p#greeting {
 	font-size: 1.3em;
 	margin: 0 0 30px 0;
+}
+
+
+/* FOOTER
+------------------------------------------- */
+footer p {
+	font-size: .8em;
+	margin: 0;
 }
