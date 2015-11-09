@@ -1,4 +1,4 @@
-window.onload = function(){
+(function(){
 	
 	// 12:00:00 AM to 4:59:59 AM - 0 to 17999 seconds
 	var punchInObscureGreeting = [
@@ -104,4 +104,4 @@ window.onload = function(){
 		moviePath: "zeroclipboard-master/ZeroClipboard.swf"  
 	});
 
-}; //end function
+})(); //end function
