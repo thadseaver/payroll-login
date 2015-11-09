@@ -7,7 +7,7 @@ window.onload = function(){
 		"I sure hope you have a lot of coffee!",
 		"Hang on a second, what time is it???",
 		"I don\'t even know what to say..."
-	]
+	];
 	
 	// 5:00:00 AM to 6:00:00 AM - 18000 to 21600 seconds
 	var punchInGreeting = [
@@ -46,7 +46,7 @@ window.onload = function(){
 	];
 	
 	// Saturday greeting
-	var saturdayGreeting = "Working Saturday sucks!"
+	var saturdayGreeting = "Working Saturday sucks!";
 	
 	//"October 22, 2014 15:45:01" date for for testing
 	var date = new Date();
@@ -101,7 +101,7 @@ window.onload = function(){
 	// Use ZeroClipboard to copy text to clipboard on button click
 	var clip = new ZeroClipboard( 
 		document.getElementById('button'), {
-		moviePath: "zeroclipboard-master/ZeroClipboard.swf"
+		moviePath: "zeroclipboard-master/ZeroClipboard.swf"  
 	});
 
 }; //end function
